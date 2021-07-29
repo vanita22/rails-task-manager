@@ -1,0 +1,28 @@
+<%= form_for @tasks do |f| %>
+    <%= f.label :title, "Title" %>
+    <%= f.text_field :title %>
+
+    <%= f.label :details, "Details" %>
+    <%= f.text_field :details %>
+
+    <%= f.label :completed, "completed" %>
+    <%= f.check_box :completed %>
+
+    <%= f.submit %>
+<% end %>
+
+<%= link_to "volver al listado", tasks_path %>
+
+
+<%# <form action="/task" method="post">
+    <label for="title">Title</label>
+    <input type="text" name="task[title]" placeholder="title">
+
+    <label for="details">Details</label>
+    <input type="text" name="task[details]" placeholder="details">
+
+    <label for="completed">Completed</label>
+    <input type="boolean" name="task[completed]" placeholder="completed">
+
+    <input type="submit">
+</form> %>
